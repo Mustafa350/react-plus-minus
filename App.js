@@ -1,31 +1,37 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+import Counter from './Counter';
 
 
-class Counter extends Component {
-state = {
-  number:0
-};
-eksi = () => {
-  this.setState({
-    number: --this.state.number
-  });
-};
-artı = () => {
-  this.setState({
-    number: ++this.state.number
-  });
+class App extends Component {
+
+
+
+
+
+  render() {
+
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+
+
+        </header>
+  <Counter/>
+
+
+
+
+
+
+
+
+      </div>
+    );
+  }
 }
- render(){
-   return(
-   <div>
-   <h1>{this.state.number}</h1>
-   <button onClick={this.artı}>+</button>
-   <button  onClick={this.eksi}>-</button>
-    </div>
 
-
-  );
- }
-}
-
-export default Counter;
+export default App;
